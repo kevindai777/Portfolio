@@ -1,0 +1,134 @@
+<!DOCTYPE HTML>
+<!--
+	Landed by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Left Sidebar - Landed by HTML5 UP</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<header id="header">
+					<h1 id="logo"><a href="index.html">Portfolio</a></h1>
+					<nav id="nav">
+						<ul>
+							<li><a href="index.html">Home</a></li>
+							<li>
+								<a href="#">Projects</a>
+								<ul>
+									<li><a href="pokemon.html">PokeEarth</a></li>
+									<li><a href="mood.html">Moody</a></li>
+									<li><a href="twitch.html">OurTwitch</a></li>
+									<!-- <li>
+										<a href="#">Submenu</a>
+										<ul>
+											<li><a href="#">Option 1</a></li>
+											<li><a href="#">Option 2</a></li>
+											<li><a href="#">Option 3</a></li>
+											<li><a href="#">Option 4</a></li>
+										</ul>
+									</li> -->
+								</ul>
+							</li>
+							<li><a href="elements.html">Elements</a></li>
+							<!-- <li><a href="#" class="button primary">Sign Up</a></li> -->
+						</ul>
+					</nav>
+				</header>
+
+			<!-- Main -->
+				<div id="main" class="wrapper style1">
+					<div class="container">
+						<header class="major">
+							<h2>PokeEarth</h2>
+							<p>Find Your Favorite Pokemon and Where to Catch Them All</p>
+						</header>
+						<div class="row gtr-150">
+							<div class="col-4 col-12-medium">
+
+								<!-- Sidebar -->
+									<section id="sidebar">
+										<section>
+											<h3>The Idea</h3>
+											<p>My childhood was full of playing video games. I remember spending hours on Super Mario World 2, Super Smash Bros, and Mario Kart. In the center of it all were the Pokemon games. Obsessed, I would spend nights playing and catching every single Pokemon. Finding the rare ones was always a struggle, and so one day I hoped to build something that would help any trainer realize their dream...</p>
+											<footer>
+												<!-- <ul class="actions">
+													<li><a href="#" class="button">Learn More</a></li>
+												</ul> -->
+											</footer>
+										</section>
+										<hr />
+										<section>
+											<a href="#" class="image fit"><img src="images/pic06.jpg" alt="" /></a>
+											<h3>Too Much Data</h3>
+											<p>There was a lot of data to incorporate into this project (85000 lines of API data to be exact!) so one of the big hurdles of this project was querying down the data to make the app run smoother.</p>
+											<footer>
+												<ul class="actions">
+													<li><a href="#" class="button">Learn More</a></li>
+												</ul>
+											</footer>
+										</section>
+									</section>
+
+							</div>
+							<div class="col-8 col-12-medium imp-medium">
+
+								<!-- Content -->
+									<section id="content">
+										<a href="#" class="image fit"><img src="images/pic05.jpg" alt="" /></a>
+										<h3>Styling and Design</h3>
+										<p>The first step in building this application was deciding the initial layouts of the application. The initial idea was to give each Pokemon a map of where they were found individually, but that ended being scrapped for a much larger, worldwide map of the entire region. From there, minimaps of each region were laid out and a 'city card' was put next to it to present details of each area.</p>
+										<p>Next was designing each Pokemon's profile. There was definitely an emphasis on power-guaging just how each Pokemon was, so a move list and stat chart were the first things implemented. After that, I believed including a visual of all of the Pokemon's locations with blinking lights would create an illusion of a 'roadmap' of where to find them, making it much more visually appealing to a user. Finally, miscellaneous details of each one were added, including their typing, genus, etc.</p>
+										<h3>Technical Process</h3>
+										<p>When building the backend of this application, I had to ask myself whether I wanted to pull directly from the API itself or seed the data separately into my own table. The challenge here was that though the first option was easier and required less time, it wouldn't set up the relationships I need between the classes. For example, if I had used the API, I wouldn't have been able to separate all of the Pokemon by region or by typing. This made the data a lot more flexible to use. For the frontend, I had to consider a couple questions...</p>
+										<ul>
+											<li>How would I navigate from page to page?</li>
+											<li>Where would I fetch the data and where am I storing state?</li>
+											<li>How would I highlight different parts of the map?</li>
+											<li>Is there a faster way of loading all of the data onto the DOM instead of all at once?</li>
+											<li>Are there any external libraries that can help my App run smoother?</li>
+										</ul>
+									</section>
+
+							</div>
+						</div>
+					</div>
+				</div>
+
+			<!-- Footer -->
+				<footer id="footer">
+					<ul class="icons">
+						<li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
+						<li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
+						<li><a href="#" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+						<li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
+						<li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+						<li><a href="#" class="icon solid alt fa-envelope"><span class="label">Email</span></a></li>
+					</ul>
+					<ul class="copyright">
+						<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+				</footer>
+
+		</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.dropotron.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
