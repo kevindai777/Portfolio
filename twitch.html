@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>Right Sidebar - Landed by HTML5 UP</title>
+		<title>OurTwitch</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -56,18 +56,19 @@
 
 								<!-- Content -->
 									<section id="content">
-										<a href="#" class="image fit"><img src="images/pic06.jpg" alt="" /></a>
+										<a href="#" class="image fit"><img src="images/twitch.png" alt="" /></a>
 										<h3>Styling and Design</h3>
-										<p>Aliquam massa urna, imperdiet sit amet mi non, bibendum euismod est. Curabitur mi justo, tincidunt vel eros ullamcorper, porta cursus justo. Cras vel neque eros. Vestibulum diam quam, mollis at magna consectetur non, malesuada quis augue. Morbi tincidunt pretium interdum est. Curabitur mi justo, tincidunt vel eros ullamcorper, porta cursus justo. Cras vel neque eros. Vestibulum diam.</p>
-										<p>Vestibulum diam quam, mollis at consectetur non, malesuada quis augue. Morbi tincidunt pretium interdum. Morbi mattis elementum orci, nec dictum porta cursus justo. Quisque ultricies lorem in ligula condimentum, et egestas turpis sagittis. Cras ac nunc urna. Nullam eget lobortis purus. Phasellus vitae tortor non est placerat tristique.</p>
+										<p>My partners and I felt that the original Twitch website was a little messy and jumbled, so we designed our application to feel simple in design and easy to understand. We incorporated the same color schema as the original site, to 'mimic' the feeling that you were still watching Twitch, just on a different platform. When designing the channel and games container layout, we chose a grid layout to make it look like an organized list.</p>
+										<p>When designing the User and Follower feature, we first had to decide how we wanted to format it. We ended up going with a simple User search feature, where any user can find any other one, and allow the main user to see what kinds of channels they have been watching. This would allow users to explore channels through other people's preferences, instead of having to scrape the website to find an interesting one by themselves.</p>
 										<h3>Technical Process</h3>
-										<p>In vestibulum massa quis arcu lobortis tempus. Nam pretium arcu in odio vulputate luctus. Suspendisse euismod lorem eget lacinia fringilla. Sed sed felis justo. Nunc sodales elit in laoreet aliquam. Nam gravida, nisl sit amet iaculis porttitor, risus nisi rutrum metus.</p>
+										<p>We seeded all of our data from the Twitch API. One of the issues with this was that it would only list the active live channels, so everytime a new channel that wasn't in the database came online, we would have to immediately create a new channel object for it. This was the same case for the game objects. The twitch livestream was loaded through an iframe, and recommended channels were configured based on the same game or the same language as the one on screen.</p>
+										<p>Here's some issues we faced during development: </p>
 										<ul>
-											<li>Faucibus orci lobortis ac adipiscing integer.</li>
-											<li>Col accumsan arcu mi aliquet placerat.</li>
-											<li>Lobortis vestibulum ut magna tempor massa nascetur.</li>
-											<li>Blandit massa non blandit tempor interdum.</li>
-											<li>Lacinia mattis arcu nascetur lobortis.</li>
+											<li>The app would crash after a channel being deleted from the database after being banned.</li>
+											<li>A channel belonged to a game, but in some cases, some channels were streaming without a game id.</li>
+											<li>After entering a channel's page, sometimes the stream would not come up until a refresh.</li>
+											<li>The data for loading all of the streams was very large, so we had to create queries to load only a couple at once.</li>
+											<li>The Twitch API was undergoing a version update when we were creating this, so we had to account for some deprecated endpoints.</li>
 										</ul>
 									</section>
 
@@ -78,7 +79,7 @@
 									<section id="sidebar">
 										<section>
 											<h3>The Idea</h3>
-											<p>Sed tristique purus vitae volutpat commodo suscipit amet sed nibh. Proin a ullamcorper sed blandit. Sed tristique purus vitae volutpat commodo suscipit ullamcorper commodo suscipit amet sed nibh. Proin a ullamcorper sed blandit..</p>
+											<p>Ever since Twitch was created with the split from Justin.tv, I've always been an avid follower of my favorite channels and streams. This continues even today, where gaming is now mainstream and my favorite streamers who used to get hundreds of viewers now receive tens of thousands. I'm also always on the lookout for new channels to watch as well. The Twitch website doesn't include much room for interaction between users, other than the anonymous Twitch chat. The idea of this app was to introduce a way for viewers to share who they watch with other users in hopes of creating a tight knit community for people who enjoy similar channels.</p>
 											<footer>
 												<ul class="actions">
 													<li><a href="#" class="button">Learn More</a></li>
@@ -87,12 +88,12 @@
 										</section>
 										<hr />
 										<section>
-											<a href="#" class="image fit"><img src="images/pic07.jpg" alt="" /></a>
+											<a href="#" class="image fit"><img src="images/" alt="" /></a>
 											<h3>API Keys?</h3>
-											<p>Sed tristique purus vitae volutpat commodo suscipit amet sed nibh. Proin a ullamcorper sed blandit. Sed tristique purus vitae volutpat commodo suscipit ullamcorper sed blandit lorem ipsum dolore.</p>
+											<p>This was my first experience dealing with a secure API, requiring a bearer token, client ID, and client secret. I used Postman to create most of my requests, and extensively learned the Twitch API docs to understand any of the restrictions.</p>
 											<footer>
 												<ul class="actions">
-													<li><a href="#" class="button">Learn More</a></li>
+													<li><a href="https://dev.twitch.tv/docs/v5/" class="button">Learn More</a></li>
 												</ul>
 											</footer>
 										</section>
@@ -104,19 +105,18 @@
 				</div>
 
 			<!-- Footer -->
-				<footer id="footer">
-					<ul class="icons">
-						<li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
-						<li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
-						<li><a href="#" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
-						<li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
-						<li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
-						<li><a href="#" class="icon solid alt fa-envelope"><span class="label">Email</span></a></li>
-					</ul>
-					<ul class="copyright">
-						<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-					</ul>
-				</footer>
+			<footer id="footer">
+				<ul class="icons">
+					<li><a href="https://twitter.com/KevinDai4" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
+					<li><a href="https://www.linkedin.com/in/kevin-dai23/" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+					<li><a href="https://wordpress.com/view/kevindai.home.blog" class="icon brands alt fa-wordpress"><span class="label">Wordpress</span></a></li>
+					<li><a href="https://github.com/locky5" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+					<li><a href="mailto: kevin.dai.2451@gmail.com" class="icon solid alt fa-envelope"><span class="label">Email</span></a></li>
+				</ul>
+				<ul class="copyright">
+					<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+				</ul>
+			</footer>
 
 		</div>
 
